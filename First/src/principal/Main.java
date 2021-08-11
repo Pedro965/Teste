@@ -11,7 +11,10 @@ import java.util.Scanner;
  */
 public class Main {
 	public static void main(String[] args) {
-		
+		/**
+		 * @author teste
+		 *
+		 */
 		System.out.println("Hello World! Como se chama? ");
 		
 		Scanner in = new Scanner(System.in);
