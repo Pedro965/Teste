@@ -23,6 +23,10 @@ public class Main {
 		
 		System.out.printf("Meu primeiro programa java %s.", nome);
 		
+		/**
+		 * @author teste_01
+		 *
+		 */		
 		
 	}
 
