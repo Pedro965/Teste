@@ -1,32 +1,68 @@
-package test;
+package arranjo;
 
-import static org.junit.jupiter.api.Assertions.*;
+public class arranjo {
 
-import org.junit.jupiter.api.Test;
-
-import arranjo.arranjo;
-
-public class ArranjoTest {
-
-	@Test
-	void test() {
-		
-		int[] b = {940, 880, 830, 790, 750, 660, 650, 590, 510, 940};
-		
-        arranjo a = new arranjo();
+    public int menor(int[] a) {
+    	
+        int menor = a[0];
         
-        assertEquals(510, a.menor(b), "O Menor deve ser 510");
-        
-        assertEquals(940, a.maior(b), "O maior é 940");
-        
-        assertEquals(7540, a.soma(b), "A soma é 7540");
-        
-        assertEquals(0, a.repitacaoArray(b,3), "3 aparece 0 vezes");
-        
-        assertEquals(1, a.repitacaoArray(b,790), "790 aparece 1 vezes");
-        
-        assertEquals(2, a.repitacaoArray(b,940), "940 aparece 2 vezes");
+        for (int i = 0; i <= a.length - 1; i++){
+        	 
+            if ( a[i] < a[0]){
+            	
+                menor = a[i];
+            }
+            
+        }
+        return menor;
 	}
 
+	public int maior(int[] a) {
+		
+		int maior = a[0];
+		
+		for(int i = 0; i <= a.length - 1; i++) {
+			
+			if( a[i] > a[0]) {
+				
+				maior = a[i];
+			}
+			
+		}
+				
+		return maior;
+	}
+
+	public int soma(int[] a) {
+		
+		int soma = 0;
+		
+		for(int i = 0; i <= a.length - 1; i++) {
+			
+			soma += a[i];
+
+		}
+		
+		return soma;
+	}
+
+	public int repitacaoArray(int[] a, int n) {
+		
+		int copia = 0;
+		
+		for(int i = 0; i <= a.length - 1; i++ ) {
+			
+		if(a[i] == n){
+			
+			copia = copia + 1;
+			
+	
+		    }
+		
+	    }
+		
+		return copia;
+	}
+       
 }
 
